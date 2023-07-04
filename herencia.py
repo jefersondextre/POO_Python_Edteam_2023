@@ -27,7 +27,7 @@ class Autobus(Vehiculo):
     self.asientos= asientos
     
   def cargarPasajeros(self,pasajeros):
-    return f"Pasajeros a bordo {pasajeros}"
+    return f"Pasajeros a bordo: {pasajeros} pasajeros."
   
   
 
@@ -38,4 +38,4 @@ motocicleta = Motocicleta("Honda","2021",100,2023,1200)
 
 autobus=Autobus("Blubird",2010,velocidad=100,anio=2023,asientos=30)
 print(autobus.modelo)
-print(autobus.cargarPasajeros())
+print(autobus.cargarPasajeros(60))

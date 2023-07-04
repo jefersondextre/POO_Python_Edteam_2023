@@ -4,11 +4,11 @@ from abc import ABC, abstractmethod
 class UsuarioBase(ABC):
   
   def __init__(self,nombre, apellido, correo, contrasenia, telefono):
-    self.nombre = nombre
-    self.apellido = apellido
-    self.correo = correo
-    self.contrasenia=self.encriptarContrasenia(contrasenia)
-    self.telefono=telefono
+        self.nombre = nombre
+        self.apellido = apellido
+        self.correo = correo
+        self.contrasenia = self.encriptarContrasenia(contrasenia)
+        self.telefono = telefono
     
   @abstractmethod
   def encriptarContrasenia(self,contrasenia):
@@ -16,11 +16,9 @@ class UsuarioBase(ABC):
     
   @abstractmethod
   def verificarContrasenia(self, contrasenia):
-    pass
-  
+    pass 
   
 class UsuarioConcreto(UsuarioBase):
-  
     def encriptarContrasenia(self,contrasenia):
       return encrypt(contrasenia,"secret")
     
@@ -29,12 +27,11 @@ class UsuarioConcreto(UsuarioBase):
       return contrasenia_desencriptada == contrasenia
     
 usuario1 = UsuarioConcreto(
-      nombre="Jeferson",
-      apellido="Dextre",
-      correo="jadex@gmail.com",
+      nombre="Jorge",
+      apellido="Vasquez",
+      correo="jvasquez@gmail.com",
       contrasenia="test",
-      telefono=926464164,
+      telefono=9264644564,
 )
-
 print(usuario1.contrasenia)
 print(usuario1.verificarContrasenia("test"))

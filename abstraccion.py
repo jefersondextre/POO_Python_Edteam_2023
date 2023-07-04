@@ -9,7 +9,10 @@ class UsuarioBase(ABC):
         self.correo = correo
         self.contrasenia = self.encriptarContrasenia(contrasenia)
         self.telefono = telefono
-    
+  
+  # el decorador es una funcion que engloba a la funcion y le da 
+  # caracteristicas adicionales imprlementadas en el metodo abstracmetod
+  # 
   @abstractmethod
   def encriptarContrasenia(self,contrasenia):
     pass
@@ -20,10 +23,12 @@ class UsuarioBase(ABC):
   
 class UsuarioConcreto(UsuarioBase):
     def encriptarContrasenia(self,contrasenia):
-      return encrypt(contrasenia,"secret")
+      # secret es nuestro token de seguridad
+      # contrasenia es la contraseña que queremos encriptar
+      return encrypt(contrasenia,"token_super_seguro")
     
     def verificarContrasenia(self, contrasenia):
-      contrasenia_desencriptada = decrypt(self.contrasenia,"secret")
+      contrasenia_desencriptada = decrypt(self.contrasenia,"token_super_seguro")
       return contrasenia_desencriptada == contrasenia
     
 usuario1 = UsuarioConcreto(
@@ -34,4 +39,18 @@ usuario1 = UsuarioConcreto(
       telefono=9264644564,
 )
 print(usuario1.contrasenia)
-print(usuario1.verificarContrasenia("test"))
+print(usuario1.verificarContrasenia("tests"))
+
+# jdextre@SMARITIMA08 MINGW64 /c/EDteam/POO_Python_Edteam_2023 (main)
+# $ py abstraccion.py
+# qDQzCQ==*7SBDw+KVJiKVzxMhdekL5g==*xBbDqLwyXfxR6xCXxZX91A==*YS9/KegFXBFZJSi5FbmsHQ==
+# True
+# (venv) 
+# jdextre@SMARITIMA08 MINGW64 /c/EDteam/POO_Python_Edteam_2023 (main)
+# $ py abstraccion.py
+# JIobEQ==*xjkKKoKsugEjMcy3aCGsaA==*NLfIWRILTXtjM4iexqNeSw==*G4BZwvUKx/OMUai/U5aNXw==
+# False
+# (venv) 
+# 
+# 
+# 

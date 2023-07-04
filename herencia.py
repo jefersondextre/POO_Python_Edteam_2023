@@ -22,9 +22,10 @@ class Motocicleta(Vehiculo):
     return "Haciendo el wheelie....🐎 !!"
   
 class Autobus(Vehiculo):
-  def __init__(self, marca, modelo, velocidad, anio, asientos):
+  def __init__(self, marca, modelo, velocidad, anio, asientos,pasajeros):
     super().__init__(marca, modelo, velocidad, anio)
     self.asientos= asientos
+   
     
   def cargarPasajeros(self,pasajeros):
     return f"Pasajeros a bordo {pasajeros}"
@@ -32,7 +33,6 @@ class Autobus(Vehiculo):
   
 
 motocicleta = Motocicleta("Honda","2021",100,2023,1200)
-# print(motocicleta.motor,'HP')
 # print(motocicleta.marca)
 # print(motocicleta.Wheelie())
 

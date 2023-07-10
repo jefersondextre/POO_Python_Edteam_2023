@@ -18,6 +18,7 @@ class PerroDomestico(Perro):
   def __init__(self,nombre,raza,propietario):
     super().__init__(nombre, raza)
     self.propietario = propietario
+    
   def juega(self):
     super().juega()  
     print(f"El perrodomestico mueve la cola")

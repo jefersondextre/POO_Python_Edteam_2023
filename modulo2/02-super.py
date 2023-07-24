@@ -5,7 +5,7 @@ class Mascota:
   def juega(self):
     print(f"La mascota {self.nombre} esta jugando")
     
-class Perro(Mascota):
+class Perro(Mascota): 
   def __init__(self,nombre,raza):
     super().__init__(nombre)
     self.raza=raza
@@ -21,7 +21,7 @@ class PerroDomestico(Perro):
     
   def juega(self):
     super().juega()  
-    print(f"El perrodomestico mueve la cola")
+    print(f"El perro domestico mueve la cola")
   
   def presentarse(self):
     print(f"Hola soy {self.nombre} de raza {self.raza} y mi dueño es {self.propietario}.")
@@ -36,3 +36,6 @@ perroDomestico = PerroDomestico(
 
 perroDomestico.presentarse()
 perroDomestico.juega()
+
+perro = Perro(nombre="yuyu",raza="pastor aleman")
+print(perro.juega())

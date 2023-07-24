@@ -8,7 +8,7 @@ class Usuario:
         self.correo = correo
         # atributos privados
         self.__telefono = telefono
-
+    
     def obtener_telefono(self):
         return self.__telefono
 

@@ -16,12 +16,11 @@ class Usuario():
     def verificarContrasenia(self):
         return "Desencriptando"
 
-Usuario1 = Usuario(
-    nombre="Jeferson",
-    apellido="Dextre",
-    correo="jadexb04@gmail.com",
-    contrasenia="test20",
-    telefono="926949164"
+Usuario1 = Usuario( nombre="Jeferson",
+                    apellido="Dextre",
+                    correo="jadexb04@gmail.com",
+                    contrasenia="test20",
+                    telefono="926949164"
 )
 
 # print(Usuario())
@@ -38,7 +37,12 @@ print(Usuario1.nombre)
 print(Usuario1.apellido)
 # print(Usuario1.encriptarContrasenia())
 
-Usuario2 = Usuario( nombre="Jon",apellido="Doe",correo="jon@gmail.com",contrasenia="2355",telefono="956223214")
+Usuario2 = Usuario( nombre="Jon",
+                    apellido="Doe",
+                    correo="jon@gmail.com",
+                    contrasenia="2355",
+                    telefono="956223214"
+)
 # Usuario2.nombre="Carlos"
 # Usuario2.apellido="Fernandez"
 print("Usuario #2")

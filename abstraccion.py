@@ -13,11 +13,11 @@ class UsuarioBase(ABC):
   
   # el decorador es una funcion que engloba a la funcion y le da 
   # caracteristicas adicionales imprlementadas en el metodo con decorador @abstracmetod
-  # 
+
   @abstractmethod
   def encriptarContrasenia(self,contrasenia):
     pass
-    
+  
   @abstractmethod
   def verificarContrasenia(self, contrasenia):
     pass 
